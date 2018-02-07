@@ -1,0 +1,408 @@
+.rrssb-buttons {
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size: 12px;
+
+  box-sizing: border-box;
+  width: 100%;
+  height: 36px;
+  margin: 0;
+  padding: 0;
+  &:after {
+    display: table;
+    clear: both;
+
+    content: ' ';
+  }
+  &:before {
+    display: table;
+
+    content: ' ';
+  }
+  li {
+    line-height: 13px;
+
+    float: left;
+
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0;
+    padding: 0 2px;
+
+    list-style: none;
+    &.rrssb-email a {
+      background-color: #0a88ff;
+      &:hover {
+        background-color: #006ed6;
+      }
+    }
+    &.rrssb-facebook a {
+      background-color: #306199;
+      &:hover {
+        background-color: #244872;
+      }
+    }
+    &.rrssb-tumblr a {
+      background-color: #32506d;
+      &:hover {
+        background-color: #22364a;
+      }
+    }
+    &.rrssb-linkedin a {
+      background-color: #007bb6;
+      &:hover {
+        background-color: #005983;
+      }
+    }
+    &.rrssb-twitter a {
+      background-color: #26c4f1;
+      &:hover {
+        background-color: #0eaad6;
+      }
+    }
+    &.rrssb-googleplus a {
+      background-color: #e93f2e;
+      &:hover {
+        background-color: #ce2616;
+      }
+    }
+    &.rrssb-youtube a {
+      background-color: #df1c31;
+      &:hover {
+        background-color: #b21627;
+      }
+    }
+    &.rrssb-reddit a {
+      background-color: #8bbbe3;
+      &:hover {
+        background-color: #62a3d9;
+      }
+    }
+    &.rrssb-pinterest a {
+      background-color: #b81621;
+      &:hover {
+        background-color: #8a1119;
+      }
+    }
+    &.rrssb-pocket a {
+      background-color: #ed4054;
+      &:hover {
+        background-color: #e4162d;
+      }
+    }
+    &.rrssb-github a {
+      background-color: #444;
+      &:hover {
+        background-color: #2b2b2b;
+      }
+    }
+    &.rrssb-instagram a {
+      background-color: #125688;
+      &:hover {
+        background-color: #0c3a5b;
+      }
+    }
+    &.rrssb-delicious a {
+      background-color: #0b79e5;
+      &:hover {
+        background-color: #095fb4;
+      }
+    }
+    &.rrssb-vk a {
+      background-color: #4d71a9;
+      &:hover {
+        background-color: #3d5a86;
+      }
+    }
+    &.rrssb-hackernews a {
+      background-color: #f60;
+      &:hover {
+        background-color: #cc5200;
+      }
+    }
+    &.rrssb-whatsapp a {
+      background-color: #43d854;
+      &:hover {
+        background-color: #28c039;
+      }
+    }
+    &.rrssb-print a {
+      background-color: #8d98a2;
+      &:hover {
+        background-color: #717f8b;
+      }
+    }
+    a {
+      font-weight: 700;
+
+      position: relative;
+
+      display: block;
+
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      padding: 11px 7px 12px 27px;
+
+      -webkit-transition: background-color .2s ease-in-out;
+              transition: background-color .2s ease-in-out;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      border-radius: 2px;
+      background-color: #ccc;
+
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      .rrssb-icon {
+        position: absolute;
+        top: 0;
+        left: 10px;
+
+        display: block;
+
+        width: 10%;
+        padding-top: 9px;
+        svg {
+          width: 17px;
+          height: 17px;
+          path {
+            fill: #fff;
+          }
+        }
+      }
+      .rrssb-text {
+        color: #fff;
+      }
+      &:active {
+        box-shadow: inset 1px 3px 15px 0 rgba(22, 0, 0, .25);
+      }
+    }
+    &.small a {
+      padding: 0;
+      .rrssb-icon {
+        position: relative;
+        top: auto;
+        left: auto;
+
+        overflow: hidden;
+
+        width: 100%;
+        margin: 0 auto;
+      }
+      .rrssb-text {
+        visibility: hidden;
+      }
+    }
+  }
+  &.large-format {
+    height: auto;
+    li {
+      height: auto;
+      a {
+        padding: 8.5% 0 8.5% 12%;
+
+        border-radius: .2em;
+
+        -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+        .rrssb-icon {
+          left: 7%;
+
+          width: 12%;
+          height: 100%;
+          padding-top: 0;
+          svg {
+            position: absolute;
+            top: 0;
+
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .rrssb-text {
+          -webkit-backface-visibility: hidden;
+                  backface-visibility: hidden;
+        }
+      }
+    }
+  }
+  &.small-format {
+    padding-top: 5px;
+    li {
+      height: 80%;
+      padding: 0 1px;
+      a .rrssb-icon {
+        height: 100%;
+        padding-top: 0;
+        svg {
+          position: relative;
+          top: 6px;
+
+          width: 80%;
+          height: 48%;
+        }
+      }
+    }
+  }
+  &.tiny-format {
+    position: relative;
+
+    height: 22px;
+    li {
+      padding-right: 7px;
+      a {
+        padding: 0;
+
+        background-color: transparent;
+        .rrssb-icon svg {
+          width: 100%;
+          height: 70%;
+        }
+        &:active,
+        &:hover {
+          background-color: transparent;
+        }
+      }
+      &.rrssb-email a .rrssb-icon {
+        svg path {
+          fill: #0a88ff;
+        }
+        &:hover .rrssb-icon svg path {
+          fill: #0054a3;
+        }
+      }
+      &.rrssb-facebook a .rrssb-icon {
+        svg path {
+          fill: #306199;
+        }
+        &:hover .rrssb-icon svg path {
+          fill: #18304b;
+        }
+      }
+      &.rrssb-tumblr a .rrssb-icon {
+        svg path {
+          fill: #32506d;
+        }
+        &:hover .rrssb-icon svg path {
+          fill: #121d27;
+        }
+      }
+      &.rrssb-linkedin a .rrssb-icon {
+        svg path {
+          fill: #007bb6;
+        }
+        &:hover .rrssb-icon svg path {
+          fill: #003650;
+        }
+      }
+      &.rrssb-twitter a .rrssb-icon {
+        svg path {
+          fill: #26c4f1;
+        }
+        &:hover .rrssb-icon svg path {
+          fill: #0b84a6;
+        }
+      }
+      &.rrssb-googleplus a .rrssb-icon {
+        svg path {
+          fill: #e93f2e;
+        }
+        &:hover .rrssb-icon svg path {
+          fill: #a01e11;
+        }
+      }
+      &.rrssb-youtube a .rrssb-icon {
+        svg path {
+          fill: #df1c31;
+        }
+        &:hover .rrssb-icon svg path {
+          fill: #84111d;
+        }
+      }
+      &.rrssb-reddit a .rrssb-icon {
+        svg path {
+          fill: #8bbbe3;
+        }
+        &:hover .rrssb-icon svg path {
+          fill: #398bcf;
+        }
+      }
+      &.rrssb-pinterest a .rrssb-icon {
+        svg path {
+          fill: #b81621;
+        }
+        &:hover .rrssb-icon svg path {
+          fill: #5d0b11;
+        }
+      }
+      &.rrssb-pocket a .rrssb-icon {
+        svg path {
+          fill: #ed4054;
+        }
+        &:hover .rrssb-icon svg path {
+          fill: #b61124;
+        }
+      }
+      &.rrssb-github a .rrssb-icon {
+        svg path {
+          fill: #444;
+        }
+        &:hover .rrssb-icon svg path {
+          fill: #111;
+        }
+      }
+      &.rrssb-instagram a .rrssb-icon {
+        svg path {
+          fill: #125688;
+        }
+        &:hover .rrssb-icon svg path {
+          fill: #061d2e;
+        }
+      }
+      &.rrssb-delicious a .rrssb-icon {
+        svg path {
+          fill: #0b79e5;
+        }
+        &:hover .rrssb-icon svg path {
+          fill: #064684;
+        }
+      }
+      &.rrssb-vk a .rrssb-icon {
+        svg path {
+          fill: #4d71a9;
+        }
+        &:hover .rrssb-icon svg path {
+          fill: #2d4263;
+        }
+      }
+      &.rrssb-hackernews a .rrssb-icon {
+        svg path {
+          fill: #f60;
+        }
+        &:hover .rrssb-icon svg path {
+          fill: #993d00;
+        }
+      }
+      &.rrssb-whatsapp a .rrssb-icon {
+        svg path {
+          fill: #43d854;
+        }
+        &:hover .rrssb-icon svg path {
+          fill: #1f962d;
+        }
+      }
+      &.rrssb-print a .rrssb-icon {
+        svg path {
+          fill: #8d98a2;
+        }
+        &:hover .rrssb-icon svg path {
+          fill: #5a656f;
+        }
+      }
+    }
+  }
+  li.rrssb-print a .rrssb-icon svg path:nth-child(2) {
+    fill: none;
+  }
+}

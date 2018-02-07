@@ -1,0 +1,255 @@
+/*
+    Created on : 09.09.2014, 08:54:17
+    Author     : Aicha Vack
+*/
+
+/*Mandatory Fields*/
+
+.vis_mandatory {
+  font-size: .83em;
+  font-weight: bold;
+
+  padding: 0;
+
+  color: #f00;
+}
+
+p.errorcontainer {
+  margin-top: 15px;
+  margin-bottom: -10px;
+  padding-top: 5px;
+}
+
+label.error {
+  font-size: 10px;
+
+  display: inline-block !important;
+
+  max-width: 60%;
+  margin: 0 0 0 30%;
+  padding: 10px;
+
+  color: #fff;
+  border-radius: 5px;
+  background-color: gray;
+}
+
+p.errorcontainer:after {
+  display: block;
+
+  width: 0;
+  height: 0;
+  margin-bottom: 12px;
+  margin-left: 35%;
+
+  content: '';
+
+  border-top: 12px solid gray;
+  border-right: 12px solid transparent;
+  border-left: 12px solid transparent;
+}
+
+.mcindividual {
+  label.error {
+    max-width: 90%;
+    margin: 0 0 0 0;
+  }
+  p.errorcontainer:after {
+    margin-left: 20px;
+  }
+  .row-fluid {
+    position: relative;
+  }
+  div[class^='fc-tbxfield'] {
+    z-index: 1000;
+  }
+}
+
+#vispoweredby {
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  text-align: center !important;
+  a {
+    color: #666;
+  }
+}
+
+.visCustomText {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.visCSSbot10 {
+  margin-bottom: 10px;
+}
+
+.visCSStop10 {
+  margin-top: 10px;
+}
+
+.visCSStop7 {
+  padding-top: 7px;
+}
+
+.mcindividual .input-group {
+  margin-bottom: 10px;
+}
+
+.visform [class^='fieldset-'] {
+  display: none;
+  &.active {
+    display: block;
+  }
+}
+
+.visprogess {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 10px;
+
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  background-color: #f5f5f5;
+
+  *zoom: 1;
+  &:before {
+    line-height: 0;
+
+    display: table;
+
+    content: '';
+  }
+  &:after {
+    line-height: 0;
+
+    display: table;
+    clear: both;
+
+    content: '';
+  }
+}
+
+.stepCont {
+  display: inline-block;
+
+  text-align: center;
+}
+
+.visprogess {
+  .badge {
+    font-size: 11.844px;
+    font-weight: bold;
+    line-height: 14px;
+
+    display: inline-block;
+
+    padding: 2px 4px;
+    padding-right: 9px;
+    padding-left: 9px;
+
+    vertical-align: baseline;
+    white-space: nowrap;
+
+    color: #fff;
+    -webkit-border-radius: 9px;
+       -moz-border-radius: 9px;
+            border-radius: 9px;
+    background-color: #999;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
+    &:empty {
+      display: none;
+    }
+  }
+  a.badge {
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      text-decoration: none;
+
+      color: #fff;
+    }
+  }
+  .badge-important {
+    background-color: #b94a48;
+  }
+  .badge-success {
+    background-color: #468847;
+  }
+}
+
+/*Fonts*/
+@font-face {
+  font-family: 'visIcon';
+  font-weight: normal;
+  font-style: normal;
+
+  src: url('../fonts/visIcon.eot?-7x6gp7');
+  src: url('../fonts/visIcon.eot?#iefix-7x6gp7') format('embedded-opentype'), url('../fonts/visIcon.woff?-7x6gp7') format('woff'), url('../fonts/visIcon.ttf?-7x6gp7') format('truetype'), url('../fonts/visIcon.svg?-7x6gp7#visIcon') format('svg');
+}
+
+[class^='visicon-'],
+[class*=' visicon-'] {
+  font-family: 'visIcon';
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+
+  text-transform: none;
+
+  speak: none;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^='visicon-'],
+[class*=' visicon-'] {
+  line-height: 14px;
+
+  display: inline-block;
+
+  width: 14px;
+  height: 14px;
+
+  *margin-right: .3em;
+}
+
+[class^='visicon-']:before,
+[class*=' visicon-']:before {
+  font-family: 'visIcon';
+  font-style: normal;
+
+  speak: none;
+}
+
+[class^='visicon-'].disabled,
+[class*=' visicon-'].disabled {
+  font-weight: normal;
+}
+
+.visicon-arrow-up-3:before {
+  content: '\e600';
+}
+
+.visicon-arrow-down-3:before {
+  content: '\e601';
+}
+
+.visicon-edit:before {
+  content: '\e602';
+}
+
+.visicon-calendar:before {
+  content: '\e603';
+}
+
+.visicon-download:before {
+  content: '\e604';
+}
+
+.visicon-eye:before {
+  content: '\e9ce';
+}

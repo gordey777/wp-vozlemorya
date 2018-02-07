@@ -1,0 +1,40 @@
+.fotorama-thumbnav-ext {
+  overflow: hidden;
+
+  width: 100%;
+}
+
+.fotorama-thumbnav-int {
+  width: calc(100% + 4px);
+  &:after {
+    content: '';
+
+    flex: auto;
+  }
+  > a {
+    display: inline-block;
+
+    margin: 10px 4px 0 0;
+
+    -webkit-transition: opacity .2s;
+            transition: opacity .2s;
+
+    opacity: .8;
+    &:hover,
+    &.active {
+      opacity: 1;
+    }
+  }
+}
+
+.fotorama-thumbnav-current {
+  -webkit-transition: opacity .6s;
+          transition: opacity .6s;
+
+  opacity: 0;
+  border: 2px solid #00afea;
+}
+
+.active > .fotorama-thumbnav-current {
+  opacity: .9;
+}

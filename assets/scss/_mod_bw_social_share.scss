@@ -1,0 +1,37 @@
+.bw-social-share {
+  .panel.panel-warning {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    line-height: 15px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    border: 1px solid transparent;
+    border-color: #faebcc;
+    border-radius: 4px;
+    background-color: #fcf8e3;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+  }
+  .panel-warning > .panel-heading {
+    color: #8a6d3b;
+    border-color: #faebcc;
+    background-color: #fcf8e3;
+  }
+  .panel-heading {
+    padding: 10px 15px;
+
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+  .panel-body {
+    padding: 20px;
+    p b {
+      font-weight: bold;
+    }
+  }
+  .rrssb-buttons.bw-social-share-buttons.bw-social-share-buttons-large li {
+    margin-bottom: 5px;
+  }
+}

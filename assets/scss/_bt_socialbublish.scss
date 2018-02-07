@@ -1,0 +1,79 @@
+/*general style*/
+
+.bt-social-share {
+  line-height: 100%;
+
+  display: inline-block;
+
+  width: 100%;
+  margin: 5px 0;
+  padding: 3px 0 2px 4px;
+
+  border: 1px solid #cad4e7;
+  border-radius: 2px;
+  background: #eee;
+}
+
+.bt-social-share-button {
+  float: left;
+
+  min-height: 25px;
+  margin-right: 5px;
+}
+
+.bt-social-share img.fb-share {
+  margin: 1px 0 0 0;
+  padding: 0;
+
+  cursor: pointer;
+
+  border: none;
+}
+
+.bt_facebook_comment {
+  padding: 5px 0;
+}
+
+/*style for left position*/
+
+.bt-social-share-left {
+  float: left;
+
+  width: 85px;
+  margin-right: 10px;
+  padding: 0 8px 8px;
+  .bt-social-share-button {
+    margin-top: 8px;
+  }
+}
+
+/*style for right position*/
+
+.bt-social-share-right {
+  float: right;
+
+  width: 85px;
+  margin-left: 10px;
+  padding: 0 8px 8px;
+  .bt-social-share-button {
+    margin-top: 8px;
+  }
+}
+
+/*style for top position*/
+
+
+
+/*style for bottom position*/
+
+/*style for above image position*/
+
+.bt-social-share-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  margin: 0;
+
+  border-radius: 0;
+}

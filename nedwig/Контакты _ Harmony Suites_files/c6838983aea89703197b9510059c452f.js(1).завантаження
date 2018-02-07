@@ -1,0 +1,14 @@
+try{(function($){$('img[width][height]:not(.uk-overlay-panel)',$('#wk-gridb58')).each(function(){var $img=$(this);if(this.width=='auto'||this.height=='auto'||!$img.is(':visible')){return;}
+var $canvas=$('<canvas class="uk-responsive-width"></canvas>').attr({width:$img.attr('width'),height:$img.attr('height')}),img=new Image,release=function(){$canvas.remove();$img.css('display','');release=function(){};};$img.css('display','none').after($canvas);$(img).on('load',function(){release();});setTimeout(function(){release();},1000);img.src=this.src;});})(jQuery);}catch(e){console.error('Error in script declaration; Error:'+e.message);};
+try{var mapexGoogleApiKey=mapexGoogleApiKey||"AIzaSyCMGhKiFMmMeBuIM9Wlu-27gNBYKZFNQlU";function getMapZoom5a6e3599a1b2f(){if(window.outerWidth<=767)
+if(Math.abs(window.orientation)===90){return 15;}
+else{return 15;}
+else
+if(window.outerWidth<=959){return 15;}
+else{return 15;}}
+function updateMap5a6e3599a1b2f(item){item.panTo(new google.maps.LatLng(42.70700236513566,27.714401488304134));item.setZoom(getMapZoom5a6e3599a1b2f());}
+jQuery(document).ready(function($){function checkWidgetkitMaps(){var item=getWidgetkitMap("wk-map-ex5a6e3599a1b2f");if(item){google.maps.event.addDomListener(window,'resize',function(){updateMap5a6e3599a1b2f(item);});window.addEventListener("orientationchange",function(){updateMap5a6e3599a1b2f(item);});jQuery(document).on("display.uk.check",function(event){var self=jQuery(event.target);var map=self.find('[id^="wk-map-ex"]');if(map.is(':visible')){map.each(function(){var id=jQuery(this).attr('id');var item=getWidgetkitMap(id);if(item){google.maps.event.trigger(item,"resize");var sub_id=id.substring(9);if(typeof window['updateMap'+sub_id]==='function'){window['updateMap'+sub_id](item);}}});}});}
+else
+setTimeout(checkWidgetkitMaps,1000);}
+setTimeout(checkWidgetkitMaps,1000);});}catch(e){console.error('Error in script declaration; Error:'+e.message);};
+;
