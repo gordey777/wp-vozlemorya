@@ -20,6 +20,7 @@ get_header(); ?>
   ?>
 
 
+
 <?php get_sidebar(); ?>
 
 <div id="tm-breadcrumbs" class="uk-block tm-block-breadcrumbs tm-parallax-background tm-block-padding-collapse " style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/p_back.jpg); background-size: auto; background-repeat: no-repeat; background-position: 50% 0%;" data-uk-parallax="{bgp:'70%'}">
