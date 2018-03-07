@@ -283,7 +283,7 @@
             <div>
               <hr class="uk-margin uk-divider-icon green uk-scrollspy-inview uk-animation-fade" uk-scrollspy-class="" style="fill: red !important;">
             </div>
-            <h2 class="uk-margin-remove-vertical uk-text-center uk-text-primary" uk-scrollspy-class=""><span style="font-size: 24pt;">Harmony Suites 11 Карта</span></h2>
+            <h2 class="uk-margin-remove-vertical uk-text-center uk-text-primary" uk-scrollspy-class=""><span style="font-size: 24pt;"><?php the_field('lend_map_title'); ?></span></h2>
             <div class="uk-margin uk-width-large uk-margin-auto uk-text-center" uk-scrollspy-class="">
               <?php $location = get_field('land_map'); ?>
               GPS: Latitude: <?php echo mb_strimwidth($location['lat'], 0, 10); ?> | Longitude: <?php echo mb_strimwidth($location['lng'], 0, 10); ?></div>
