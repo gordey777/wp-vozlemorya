@@ -6923,13 +6923,28 @@ header nav.head-cont {
     background-color: rgba(0, 0, 0, 0.4);
   }
   .main__menu .lang_wrapp {
-    position: relative;
+    line-height: 55px;
+    position: absolute;
     z-index: 999999;
+    top: 0;
+    left: 0;
     float: left;
     width: 100%;
     height: 55px;
-    padding: 15px 0;
+    padding: 0;
+    vertical-align: middle;
+    pointer-events: none;
     background: #fff;
+  }
+  .main__menu .lang_wrapp ul {
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    pointer-events: auto;
+  }
+  .main__menu .lang_wrapp ul li a {
+    pointer-events: auto;
   }
   .main__menu .headnav {
     position: relative;

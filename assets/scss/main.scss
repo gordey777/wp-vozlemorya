@@ -537,16 +537,37 @@ header {
       background-color: rgba(0,0,0, .4);
     }
     .lang_wrapp {
-      position: relative;
+      line-height: 55px;
+
+      position: absolute;
       z-index: 999999;
+      top: 0;
+      left: 0;
 
       float: left;
 
       width: 100%;
       height: 55px;
-      padding: 15px 0;
+      padding: 0;
+
+      vertical-align: middle;
+      pointer-events: none;
 
       background: #fff;
+      ul {
+        display: inline-block;
+
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        pointer-events: auto;
+        li {
+          a {
+            pointer-events: auto;
+          }
+        }
+      }
     }
     .headnav {
       position: relative;

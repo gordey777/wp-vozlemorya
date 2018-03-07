@@ -222,7 +222,7 @@ jQuery(document).ready(function($) {
   function stikyMenu() {
 
     $(window).scroll(function() {
-      if (($(window).scrollTop() > $headerH) || ($(window).width() > 768)) {
+      if (($(window).scrollTop() > $headerH) && ($(window).width() > 768)) {
         $('header').addClass('menu__stiky');
         $('.logo_wrapp').css('left', $logoLeft);
       } else {
