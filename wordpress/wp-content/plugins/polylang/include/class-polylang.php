@@ -101,7 +101,16 @@ class Polylang {
 		// Special test for plupload which does not use jquery ajax and thus does not pass our ajax prefilter
 		// Special test for customize_save done in frontend but for which we want to load the admin
 		$in = isset( $_REQUEST['action'] ) && in_array( $_REQUEST['action'], array( 'upload-attachment', 'customize_save' ) );
-		return wp_doing_ajax() && empty( $_REQUEST['pll_ajax_backend'] ) && ! $in;
+		$is_ajax_on_front = wp_doing_ajax() && empty( $_REQUEST['pll_ajax_backend'] ) && ! $in;
+
+		/**
+		 * Filters whether the current request is an ajax request on front.
+		 *
+		 * @since 2.3
+		 *
+		 * @param bool $is_ajax_on_front Whether the current request is an ajax request on front.
+		 */
+		return apply_filters( 'pll_is_ajax_on_front', $is_ajax_on_front );
 	}
 
 	/**
@@ -116,7 +125,7 @@ class Polylang {
 			define( 'PLL_COOKIE', 'pll_language' );
 		}
 
-		// Avoid loading polylang admin for frontend ajax requests
+		// Backward compatibility with Polylang < 2.3
 		if ( ! defined( 'PLL_AJAX_ON_FRONT' ) ) {
 			define( 'PLL_AJAX_ON_FRONT', self::is_ajax_on_front() );
 		}
@@ -130,6 +139,24 @@ class Polylang {
 		if ( ! defined( 'PLL_SETTINGS' ) ) {
 			define( 'PLL_SETTINGS', is_admin() && ( ( isset( $_GET['page'] ) && 0 === strpos( $_GET['page'], 'mlang' ) ) || ! empty( $_REQUEST['pll_ajax_settings'] ) ) );
 		}
+	}
+
+	/**
+	 * Should we activate Polylang on front
+	 *
+	 * @since 2.3.2
+	 *
+	 * @param object $model
+	 * @return bool
+	 */
+	protected function is_active_on_front( $model ) {
+		// Do nothing on frontend if no language is defined
+		// Or if it is a REST request and the compatibility class is not present
+		return $model->get_languages_list() &&
+			empty( $_GET['deactivate-polylang'] ) && (
+				class_exists( 'PLL_REST_Translated_Object' ) ||
+				false === strpos( str_replace( 'index.php', '', $_SERVER['REQUEST_URI'] ), '/' . rest_get_url_prefix() . '/' )
+			);
 	}
 
 	/**
@@ -169,12 +196,9 @@ class Polylang {
 
 		if ( PLL_SETTINGS ) {
 			$polylang = new PLL_Settings( $links_model );
-		}
-		elseif ( PLL_ADMIN ) {
+		} elseif ( PLL_ADMIN ) {
 			$polylang = new PLL_Admin( $links_model );
-		}
-		// Do nothing on frontend if no language is defined
-		elseif ( $model->get_languages_list() && empty( $_GET['deactivate-polylang'] ) ) {
+		} elseif ( $this->is_active_on_front( $model ) ) {
 			$polylang = new PLL_Frontend( $links_model );
 		}
 

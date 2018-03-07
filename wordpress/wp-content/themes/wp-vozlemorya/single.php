@@ -14,6 +14,10 @@
     $home__id = '1457';
 
   }
+    else if ( $currentLanguage == "pl-PL" ) {
+    $home__id = '1597';
+
+  }
   ?>
 
 <?php get_sidebar(); ?>

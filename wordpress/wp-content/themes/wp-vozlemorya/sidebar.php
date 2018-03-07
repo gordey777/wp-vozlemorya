@@ -20,6 +20,10 @@
     $home__id = '1457';
 
   }
+  else if ( $currentLanguage == "pl-PL" ) {
+    $home__id = '1597';
+
+  }
   ?>
 
 <div class="tm-sidepanel uk-width-9-10 uk-width-medium-3-5 uk-width-large-1-3 tm-sidepanel-left uk-block-default uk-hidden-small sidepanel_hidden">

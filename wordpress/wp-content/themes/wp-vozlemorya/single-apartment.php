@@ -18,21 +18,6 @@ get_header(); ?>
   $rooms_fild = get_field_object('rooms');
   $bathrooms_fild = get_field_object('bathrooms');
 
-  $location_label = '';
-  $property_type_label = '';
-  $status_label = '';
-  $floor_label = '';
-  $view_label = '';
-  $area_label = '';
-  $living_area_label = '';
-  $rooms_label = '';
-  $bathrooms_label = '';
-
-
-  $currentLanguage  = get_bloginfo('language');
-
-  if ( $currentLanguage == "ru-RU" ) {
-    $home__id = '37';
     $location_label = $location_fild["instructions"];
     $property_type_label = $property_type_fild["instructions"];
     $status_label = $status_fild["instructions"];
@@ -42,6 +27,15 @@ get_header(); ?>
     $living_area_label = $living_area_fild["instructions"];
     $rooms_label = $rooms_fild["instructions"];
     $bathrooms_label = $bathrooms_fild["instructions"];
+    $cat_desc = 'Описание';
+    $cat_det = 'Детали';
+
+
+  $currentLanguage  = get_bloginfo('language');
+
+  if ( $currentLanguage == "ru-RU" ) {
+    $home__id = '37';
+
   }  else if ( $currentLanguage == "en-US" ) {
     $home__id = '1457';
     $location_label = $location_fild["label"];
@@ -53,7 +47,25 @@ get_header(); ?>
     $living_area_label = $living_area_fild["label"];
     $rooms_label = $rooms_fild["label"];
     $bathrooms_label = $bathrooms_fild["label"];
+    $cat_desc = 'Description';
+    $cat_det = 'Details';
   }
+  else if ( $currentLanguage == "pl-PL" ) {
+    $home__id = '1597';
+    $location_label = 'Lokalizacja';
+    $property_type_label = 'Rodzaj nieruchomości';
+    $status_label = 'Status';
+    $floor_label = 'Piętro';
+    $view_label = 'Wyświetl';
+    $area_label = 'Obszar';
+    $living_area_label = 'Powierzchnia mieszkalna';
+    $rooms_label = 'Pokoje';
+    $bathrooms_label = 'Łazienki';
+    $cat_desc = 'Opis';
+    $cat_det = 'Szczegóły';
+  }
+
+
   ?>
 
 <?php get_sidebar(); ?>
@@ -137,14 +149,14 @@ get_header(); ?>
                 <div class="uk-grid uk-grid-match uk-grid-medium" data-uk-grid-match="{target:'> div > .uk-panel', row:true}" data-uk-grid-margin>
                   <div class="uk-width-1-1 uk-width-medium-1-2 uk-width-large-2-3 property-descripton-wrapper">
                     <div class="uk-panel uk-panel-header">
-                      <div class="uk-h3 uk-panel-title">Описание</div>
+                      <div class="uk-h3 uk-panel-title"><?php echo $cat_desc; ?></div>
                         <?php the_content(); ?>
 
                     </div>
                   </div>
                   <div class="uk-width-1-1 uk-width-medium-1-2 uk-width-large-1-3">
                     <div class="uk-panel uk-panel-header">
-                      <div class="uk-h3 uk-panel-title">Детайли</div>
+                      <div class="uk-h3 uk-panel-title"><?php echo $cat_det; ?></div>
 
                         <ul class="uk-list uk-list-space">
 
