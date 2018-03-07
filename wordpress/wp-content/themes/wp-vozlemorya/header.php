@@ -62,7 +62,7 @@
     $home__id = '37';
 
   }  else if ( $currentLanguage == "en-US" ) {
-    $home__id = '1457';
+    $home__id = '1627';
 
   } else if ( $currentLanguage == "pl-PL" ) {
     $home__id = '1597';

@@ -37,7 +37,7 @@ get_header(); ?>
     $home__id = '37';
 
   }  else if ( $currentLanguage == "en-US" ) {
-    $home__id = '1457';
+    $home__id = '1627';
     $location_label = $location_fild["label"];
     $property_type_label = $property_type_fild["label"];
     $status_label = $status_fild["label"];
