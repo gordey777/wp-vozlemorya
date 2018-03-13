@@ -58,9 +58,10 @@
               <div class="container-fluid">
               <div class="col-md-12">
                 <h2><?php the_field('callback_title', $home__id); ?></h2>
-                <p><?php the_field('callback_subtitle', $home__id); ?></p>
+                <p><?php the_field('callback_subitle', $home__id); ?></p>
 
-                  <?php the_field('callback', $home__id); ?>
+                <?php $form__callback = get_field('callback', $home__id); ?>
+                <?php echo do_shortcode($form__callback); ?>
               </div>
             </div>
           </div>
