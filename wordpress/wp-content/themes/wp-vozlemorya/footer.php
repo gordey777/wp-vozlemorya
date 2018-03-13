@@ -51,6 +51,23 @@
 
 </footer><!-- /footer -->
 
+<?php if (get_field('callback', $home__id)) { ?>
+      <div class="modal fade modal-callback" id="mod__callback" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-body"><button class="close" data-dismiss="modal" aria-label="Close">×</button>
+              <div class="container-fluid">
+              <div class="col-md-12">
+                <h2><?php the_field('callback_title', $home__id); ?></h2>
+                <p><?php the_field('callback_subtitle', $home__id); ?></p>
+
+                  <?php the_field('callback', $home__id); ?>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+<?php } ?>
+
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcayTYSI4rr00RHsTKXYNHSRY5JnMcAYY"></script>
     <?php wp_footer(); ?>
 

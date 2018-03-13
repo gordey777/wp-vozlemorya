@@ -690,3 +690,75 @@ header {
     }
   }
 }
+
+.head_callback {
+  font-size: 20px;
+
+  display: inline-block;
+  float: right;
+
+  margin-right: 15%;
+  padding: 10px 20px;
+
+  color: #fff;
+  border-radius: 40px;
+  background: green;
+  &:hover {
+    color: #fff;
+    background: darken(green, 15%);
+  }
+}
+.contacts_callback {
+  display: inline-block;
+
+  padding: 10px 20px;
+
+  color: #fff;
+  border-radius: 3px;
+  background: green;  &:hover {
+    color: #fff;
+    background: darken(green, 15%);
+  }
+}
+
+
+.modal-callback {
+  .modal-dialog {
+    .modal-body {
+      max-height: none;
+
+      text-align: center;
+      .close {
+        font-size: 25px;
+      }
+      h2 {
+        display: inline-block;
+
+        width: 100%;
+        margin-bottom: 10px;
+
+        text-align: left;
+        text-transform: uppercase;
+
+        color: #746037;
+      }
+      p {
+        display: inline-block;
+
+        width: 100%;
+        margin-bottom: 10px;
+
+        text-align: left;
+      }
+      input:not(.btn) {
+        display: inline-block;
+
+        min-width: 100%!important;
+        margin-bottom: 10px;
+      }
+      .btn {
+        margin: 10px auto;
+      }
+    }
+  }
+}

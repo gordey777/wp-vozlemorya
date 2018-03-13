@@ -86,8 +86,11 @@
           <?php } ?>
 
         </div>
-        <?php if( have_rows('head_phones', $home__id) ): ?>
+        <a class="head_callback" data-toggle="modal" href="#mod__callback">Call Back</a>
+        <?php if( have_rows('__head_phones', $home__id) ): ?>
           <div class="phon_wrapp">
+
+
             <div class="phones_title"><?php the_field('phones_title', $home__id); ?></div>
             <div class="phones">
               <?php while ( have_rows('head_phones', $home__id) ) : the_row(); ?>

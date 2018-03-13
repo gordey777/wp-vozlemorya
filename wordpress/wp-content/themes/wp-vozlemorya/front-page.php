@@ -386,7 +386,8 @@
               <h3 class="el-title uk-margin uk-h2"><?php the_field('view_tour_title'); ?></h3>
             </div>
             <div class="uk-button-extra-large green uk-margin-remove-vertical uk-text-center" uk-scrollspy-class="uk-animation-slide-right">
-              <a class="el-content uk-button uk-button-primary uk-button-large" href="<?php the_field('view_tour_link'); ?>" uk-scroll="">
+
+              <a class="el-content uk-button uk-button-primary uk-button-large" href="#request<?php //the_field('view_tour_link'); ?>" uk-scroll="">
                 <?php the_field('view_tour_link_label'); ?>
               </a>
             </div>
@@ -441,6 +442,9 @@
               </div>
               <div class="uk-margin-remove-vertical uk-text-primary uk-text-large"><?php the_field('lend_consalt_name'); ?></div>
               <div class="uk-margin-remove-vertical"><?php the_field('lend_consalt_position'); ?></div>
+              <div class="uk-margin-top uk-clearfix">
+                <a class="contacts_callback" data-toggle="modal" href="#mod__callback">Callback</a>
+              </div>
               <div class="uk-margin-top uk-clearfix">
                 <i class="fa fa-phone" style="margin-right:3px;"></i> <a href="tel:<?php the_field('lend_consalt_tel1'); ?>"><?php the_field('lend_consalt_tel1'); ?></a>
                 <i class="fa fa-whatsapp" style="color:#47C252; margin-left:5px;" title="WhatsApp"></i>

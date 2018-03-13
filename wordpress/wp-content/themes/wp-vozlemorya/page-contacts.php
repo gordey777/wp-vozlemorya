@@ -81,7 +81,12 @@ get_header(); ?>
                         <?php } ?>
                         <div class="uk-margin">
 
-                          <div class="uk-margin-remove uk-clearfix"> <i class="uk-icon uk-icon-phone" style="margin-right:3px;"></i>
+                          <div class="uk-margin-remove uk-clearfix">
+                            <a class="contacts_callback" data-toggle="modal" href="#mod__callback">Callback</a>
+                          </div>
+                          <div class="uk-margin-remove uk-clearfix">
+                            <i class="uk-icon uk-icon-phone" style="margin-right:3px;"></i>
+                            <
                             <a href="tel:<?php the_sub_field('tel1'); ?>"><?php the_sub_field('tel1'); ?></a>
                             <i class="uk-icon uk-icon-whatsapp" style="color:#47C252; margin-left:5px;" title="WhatsApp"></i><i style="color:#7C529E; margin-left:3px;" class="uk-icon ftl-icon-viber" title="Viber"></i>
                           </div>

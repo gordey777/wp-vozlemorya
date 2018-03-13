@@ -7037,4 +7037,68 @@ header nav.head-cont {
   }
 }
 
+.head_callback {
+  font-size: 20px;
+  display: inline-block;
+  float: right;
+  margin-right: 15%;
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 40px;
+  background: green;
+}
+
+.head_callback:hover {
+  color: #fff;
+  background: #003400;
+}
+
+.contacts_callback {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 3px;
+  background: green;
+}
+
+.contacts_callback:hover {
+  color: #fff;
+  background: #003400;
+}
+
+.modal-callback .modal-dialog .modal-body {
+  max-height: none;
+  text-align: center;
+}
+
+.modal-callback .modal-dialog .modal-body .close {
+  font-size: 25px;
+}
+
+.modal-callback .modal-dialog .modal-body h2 {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 10px;
+  text-align: left;
+  text-transform: uppercase;
+  color: #746037;
+}
+
+.modal-callback .modal-dialog .modal-body p {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.modal-callback .modal-dialog .modal-body input:not(.btn) {
+  display: inline-block;
+  min-width: 100% !important;
+  margin-bottom: 10px;
+}
+
+.modal-callback .modal-dialog .modal-body .btn {
+  margin: 10px auto;
+}
+
 /*# sourceMappingURL=maps/main.css.map */
