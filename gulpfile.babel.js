@@ -144,7 +144,7 @@ gulp.task('browserSync', function() {
   if (htmlOWp === true) {
     args = {
       notify: false,
-      port: 9080,
+      port: 9081,
       server: {
         baseDir: config.path.base.dest,
       }
@@ -152,7 +152,7 @@ gulp.task('browserSync', function() {
   } else {
     args = {
       notify: false,
-      port: 9090,
+      port: 9092,
       proxy: config.domain,
       host: config.domain,
     }
