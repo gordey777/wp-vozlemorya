@@ -83,29 +83,39 @@
   <?php } else {?>
 
   <?php } ?>
-<!--
+
 <script type="text/javascript">
 document.addEventListener( 'wpcf7mailsent', function( event ) {
-    if ( '1118' == event.detail.contactFormId ) {
-        ga('send', 'event', { eventCategory: '/property', eventAction: '#getCallBack', eventLabel: '#getCallBack'});
+    if ( '1701' == event.detail.contactFormId ) {
+        ga('send', 'event', { eventCategory: '/', eventAction: '#callback_form_submit', eventLabel: '#callback_form_submit'});
     }
 }, false );
 document.addEventListener( 'wpcf7mailsent', function( event ) {
-    if ( '4' == event.detail.contactFormId ) {
-    ga('send', 'event', { eventCategory: '/property', eventAction: '#formcontrol', eventLabel: '#formcontrol'})
+    if ( '1702' == event.detail.contactFormId ) {
+    ga('send', 'event', { eventCategory: '/', eventAction: '#callback_form_submit', eventLabel: '#callback_form_submit'});
     }
 }, false );
 document.addEventListener( 'wpcf7mailsent', function( event ) {
-    if ( '1119' == event.detail.contactFormId ) {
-    ga('send', 'event', { eventCategory: '/property', eventAction: '#formcontrol', eventLabel: '#formcontrol'})
+    if ( '1703' == event.detail.contactFormId ) {
+    ga('send', 'event', { eventCategory: '/', eventAction: '#callback_form_submit', eventLabel: '#callback_form_submit'});
     }
 }, false );
 document.addEventListener( 'wpcf7mailsent', function( event ) {
-    if ( '604' == event.detail.contactFormId ) {
-    ga('send', 'event', { eventCategory: '/property', eventAction: '#formcontrol', eventLabel: '#formcontrol'})
+    if ( '36' == event.detail.contactFormId ) {
+    ga('send', 'event', { eventCategory: '/', eventAction: '#write_us_submit', eventLabel: '#write_us_submit'});
     }
 }, false );
-</script> -->
+document.addEventListener( 'wpcf7mailsent', function( event ) {
+    if ( '1618' == event.detail.contactFormId ) {
+    ga('send', 'event', { eventCategory: '/', eventAction: '#write_us_submit', eventLabel: '#write_us_submit'});
+    }
+}, false );
+document.addEventListener( 'wpcf7mailsent', function( event ) {
+    if ( '1619' == event.detail.contactFormId ) {
+    ga('send', 'event', { eventCategory: '/', eventAction: '#write_us_submit', eventLabel: '#write_us_submit'});
+    }
+}, false );
+</script>
 
 <link href="//vozlemorya.com/telegram/telegram-site-helper.css" rel="stylesheet">
 <script type="text/javascript" src="//vozlemorya.com/telegram/telegram-site-helper.js"></script>
