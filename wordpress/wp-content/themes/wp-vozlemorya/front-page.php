@@ -82,8 +82,7 @@
         </div>
 
         <div class="uk-grid-margin" uk-grid="">
-          <div class="uk-width-expand@m uk-width-1-2@s">
-          </div>
+          <div class="uk-width-expand@m uk-width-1-2@s"></div>
           <?php if( have_rows('short_about_lists') ): ?>
             <?php while ( have_rows('short_about_lists') ) : the_row(); ?>
 
@@ -101,8 +100,7 @@
               </div>
             <?php  endwhile; ?>
           <?php endif; ?>
-          <div class="uk-width-expand@m uk-width-1-2@s">
-          </div>
+          <div class="uk-width-expand@m uk-width-1-2@s"></div>
         </div>
 
 

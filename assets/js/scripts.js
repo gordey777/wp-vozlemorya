@@ -64,13 +64,6 @@ jQuery(document).ready(function($) {
       .closest('div.tabs____tabs').find('div.tab_content').removeClass('current').eq(jQuery(this).index()).addClass('current');
 
   });
-  // jQuery('#tabs_list li').click(function(e) {
-  //   e.preventDefault();
-  //   slider.reloadSlider();
-  // });
-
-
-
 
   var sync1 = jQuery("#sync1");
   var sync2 = jQuery("#sync2");
@@ -185,16 +178,10 @@ jQuery(document).ready(function($) {
   $(window).resize(function() {
     var postSlideW = $('.rama-wrap').width(),
       postSlideH = postSlideW * .35;
-
-
     $('#sync1').height(postSlideH);
     $('#sync1 .owl-item').height(postSlideH);
   });
-
-
-
   //paralax breadcrumbs
-
 
   $(window).bind('scroll', function(e) {
     parallaxScrollBread();
@@ -327,25 +314,6 @@ jQuery(document).ready(function($) {
   ///forms
   $('.wpcf7-form').addClass('uk-form uk-margin visform');
 
-
-  //sidebuner
-
-
-  /*$(function(){
-
-  $( ".tm-button-sidepanel" ).click(function() {
-    $('.tm-sidepanel').toggleClass('uk-open');
-  });
-
-
-
-     function show_popup(){
-        $( ".tm-sidepanel" ).removeClass('sidepanel_hidden').addClass('uk-open');
-     };
-     window.setTimeout( show_popup, 17000 );
-  });*/
-
-
   (function($) {
 
     var allPanels = $('.main__menu');
@@ -363,6 +331,17 @@ jQuery(document).ready(function($) {
     });
 
   })(jQuery);
+
+  $(document).ready(function() {
+    setTimeout(function() {
+      $('.order-tours--container').fadeIn('slow');
+    }, 13000);
+
+    $('.order-tours--close').on('click', function(e){
+      e.preventDefault();
+      $('.order-tours--container').fadeOut('slow');
+    })
+  });
 
 
 });

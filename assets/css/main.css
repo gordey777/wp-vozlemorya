@@ -6596,7 +6596,7 @@ header nav.head-cont {
   padding: 5px 0;
   text-decoration: none;
   text-transform: uppercase;
-  color: #444;
+  color: #444444;
 }
 
 .main__menu .headnav > li > a:before {
@@ -6642,7 +6642,7 @@ header nav.head-cont {
   padding: 0 0;
   transition: all .4s;
   opacity: 0;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .main__menu .headnav > li .sub-menu li {
@@ -6664,7 +6664,7 @@ header nav.head-cont {
   text-align: left;
   white-space: nowrap;
   text-decoration: none;
-  color: #444;
+  color: #444444;
 }
 
 .main__menu .headnav > li .sub-menu li a:hover {
@@ -6697,7 +6697,7 @@ header nav.head-cont {
   right: 0;
   left: 0;
   display: inline-block;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .menu__stiky .logo_wrapp {
@@ -6751,12 +6751,12 @@ header nav.head-cont {
   padding: 20px 40px;
   transition: all .5s;
   opacity: 0;
-  color: #fff;
+  color: #ffffff;
   background-color: rgba(0, 0, 0, 0.3);
 }
 
 #home__slider .owl-item .slide .slide_conten_wrapp * {
-  color: #fff;
+  color: #ffffff;
 }
 
 #home__slider .owl-item .slide .slide_conten_wrapp .uk-button-extra-large.green .uk-button-default {
@@ -6908,7 +6908,7 @@ header nav.head-cont {
     transition: all .4s;
     text-align: left;
     pointer-events: none;
-    background-color: #fff;
+    background-color: #ffffff;
   }
   .main__menu .mob_overlay {
     position: fixed;
@@ -6934,7 +6934,7 @@ header nav.head-cont {
     padding: 0;
     vertical-align: middle;
     pointer-events: none;
-    background: #fff;
+    background: #ffffff;
   }
   .main__menu .lang_wrapp ul {
     display: inline-block;
@@ -6957,7 +6957,7 @@ header nav.head-cont {
     float: left;
     padding: 0;
     pointer-events: none;
-    background: #fff;
+    background: #ffffff;
   }
   .main__menu .headnav li {
     position: relative;
@@ -6979,7 +6979,7 @@ header nav.head-cont {
     text-decoration: none;
     text-transform: uppercase;
     pointer-events: auto;
-    color: #444;
+    color: #444444;
   }
   .main__menu .headnav li a:after {
     width: 100%;
@@ -7039,30 +7039,36 @@ header nav.head-cont {
 
 .head_callback {
   font-size: 20px;
+  position: fixed;
+  z-index: 500;
+  top: 150px;
+  left: 0;
   display: inline-block;
-  float: right;
-  margin-right: 15%;
-  padding: 10px 20px;
-  color: #fff;
-  border-radius: 40px;
+  margin: 0;
+  padding: 5px 10px;
+  transform: rotate(90deg);
+  transform-origin: left bottom;
+  color: #ffffff;
+  border-radius: 5px 5px 0 0;
   background: green;
 }
 
 .head_callback:hover {
-  color: #fff;
+  text-decoration: none;
+  color: #ffffff;
   background: #003400;
 }
 
 .contacts_callback {
   display: inline-block;
   padding: 10px 20px;
-  color: #fff;
+  color: #ffffff;
   border-radius: 3px;
   background: green;
 }
 
 .contacts_callback:hover {
-  color: #fff;
+  color: #ffffff;
   background: #003400;
 }
 
@@ -7099,6 +7105,102 @@ header nav.head-cont {
 
 .modal-callback .modal-dialog .modal-body .btn {
   margin: 10px auto;
+}
+
+.order-tours--container {
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  border-top: 3px solid #b0915a;
+  background-color: #fef8e6;
+  background-color: #ffffff;
+}
+
+.order-tours--container.order-tours--shown {
+  display: block;
+}
+
+.order-tours--container .order-tours {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1340px;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  align-content: stretch;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.order-tours--container .order-tours--item {
+  width: 25%;
+  height: 220px;
+  padding: 0 20px;
+}
+
+.order-tours--container .order-tours--item-1 {
+  padding-top: 60px;
+}
+
+.order-tours--container .order-tours--item-1 h5 {
+  font-size: 26px;
+}
+
+.order-tours--container .order-tours--item-1 button {
+  padding: 15px;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: 0;
+  border-radius: 5px;
+  background-color: #b0915a;
+}
+
+.order-tours--container .order-tours--item-1 button:hover {
+  background-color: #80683d;
+}
+
+.order-tours--container .order-tours--item-2,
+.order-tours--container .order-tours--item-3,
+.order-tours--container .order-tours--item-4 {
+  padding-top: 160px;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.order-tours--container .order-tours--item-2 h5,
+.order-tours--container .order-tours--item-3 h5,
+.order-tours--container .order-tours--item-4 h5 {
+  font-size: 18px;
+}
+
+.order-tours--container .order-tours--item-2 {
+  background-image: url(../img/order-tours--item-2.jpg);
+}
+
+.order-tours--container .order-tours--item-3 {
+  background-image: url(../img/order-tours--item-3.jpg);
+}
+
+.order-tours--container .order-tours--item-4 {
+  background-image: url(../img/order-tours--item-4.jpg);
+}
+
+.order-tours--container .order-tours--close {
+  font-weight: bold;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  text-decoration: none;
+  color: #b0915a;
+}
+
+.order-tours--container .order-tours--close:hover {
+  color: #c9b38e;
 }
 
 /*# sourceMappingURL=maps/main.css.map */

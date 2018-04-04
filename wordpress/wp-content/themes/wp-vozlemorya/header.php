@@ -11,6 +11,7 @@
   <link href="https://www.googletagmanager.com" rel="dns-prefetch">
 
   <!-- icons -->
+  <link href="<?php echo get_template_directory_uri(); ?>/favicon.ico" rel="shortcut icon">
 
   <!--[if lt IE 9]>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -23,7 +24,7 @@
   <?php } else {?>
 		<link href="<?php echo get_template_directory_uri(); ?>/css/contacts.css" rel="stylesheet" type="text/css">
   <?php } ?>
-  
+
   <?php wp_head(); ?>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -71,7 +72,6 @@
             </span>
           <?php } ?>
         </div>
-        <a class="head_callback" data-toggle="modal" href="#mod__callback" onclick="ga('send', 'event', { eventCategory: '/', eventAction: '#callback_form', eventLabel: '#callback_form'});">Call Back</a>
         <?php if( have_rows('__head_phones', $home__id) ): ?>
           <div class="phon_wrapp">
             <div class="phones_title"><?php the_field('phones_title', $home__id); ?></div>
@@ -86,11 +86,11 @@
       <div class="menu_wrapp">
         <div class="uk-container">
           <nav class="main__menu">
-			<div class="lang_wrapp">
+            <div class="lang_wrapp">
               <?php wpeLangNav(); ?>
             </div>
             <?php wpeHeadNav(); ?>
-			<div class="mob_overlay"></div>
+            <div class="mob_overlay"></div>
           </nav>
           <div id="humburger" class="humburger"><i class="fa fa-bars"></i></i></div>
         </div>
