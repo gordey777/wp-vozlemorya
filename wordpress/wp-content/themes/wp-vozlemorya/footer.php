@@ -50,7 +50,7 @@
     <div class="order-tours">
       <div class="order-tours--item order-tours--item-1">
         <h5>Смотровой тур на двоих за 250 евро</h5>
-        <button data-toggle="modal" href="#modal-order" >Подпишись сейчас</button>
+        <button data-toggle="modal" data-target="#modalorder" >Подпишись сейчас</button>
       </div>
       <div class="order-tours--item order-tours--item-2">
         <p>Наш опытный персонал организует вашу поездку с момента вашего прибытия в Болгарию до самого отьезда</p>
@@ -75,15 +75,15 @@
 
 </footer><!-- /footer -->
 
-  <a class="head_callback" data-toggle="modal" href="#mod__callback" onclick="ga('send', 'event', { eventCategory: '/', eventAction: '#callback_form', eventLabel: '#callback_form'});">Call Back</a>
+  <a class="head_callback" data-toggle="modal" data-target="#mod__callback" onclick="ga('send', 'event', { eventCategory: '/', eventAction: '#callback_form', eventLabel: '#callback_form'});">Call Back</a>
 
-  <div class="modal fade modal-order" id="modal-order">
+  <div class="modal fade modal-order" id="modalorder">
     <div class="modal-dialog">
       <div class="modal-body">
          <button class="close" data-dismiss="modal" aria-label="Close">×</button>
           <div class="container-fluid">
           <div class="col-md-12">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo nesciunt sit quibusdam atque aspernatur labore praesentium, excepturi veniam, cupiditate consequatur optio odio eos sequi id consequuntur at voluptates ut repudiandae?
+            <?php echo do_shortcode('[contact-form-7 id="1721" title="Запись на тур"]'); ?>
           </div>
         </div>
       </div>

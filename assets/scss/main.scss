@@ -715,6 +715,7 @@ header {
 
 
 .modal-callback {
+  display: none;
   .modal-dialog {
     .modal-body {
       max-height: none;
@@ -842,5 +843,76 @@ header {
     &:hover {
       color: lighten(#b0915a, 15%);
     }
+  }
+}
+
+.modal-order {
+  form {
+    position: relative;
+    z-index: 50;
+
+    input: [type=submit] {
+      padding: 5px 10px;
+
+      color: #ffffff;
+    }
+    textarea {
+      height: 90px;
+      margin-bottom: 10px;
+    }
+  }
+}
+#wpcf7-f36-o1 {
+  input {
+    width: 69%;
+  }
+  textarea {
+    height: 120px;
+
+    background-color: #ffffff;
+  }
+}
+
+div.modal {
+  width: 30%;
+  min-width: 320px;
+  max-width: 400px;
+  left: auto;
+  top: auto;
+  margin-left: 0;
+}
+
+
+@media (max-width: 1120px) {
+  .order-tours--container {
+    flex-wrap: wrap;
+    .order-tours--item-1,
+    .order-tours--item-2,
+    .order-tours--item-3,
+    .order-tours--item-4 {
+      width: 50%;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 1080px) {
+  .order-tours--container .order-tours--item-1,
+  .order-tours--container .order-tours--item-2,
+  .order-tours--container .order-tours--item-3,
+  .order-tours--container .order-tours--item-4 {
+    background-size: contain;
+  }
+}
+@media (max-width: 960px) {
+  .order-tours--container .order-tours--item-2,
+  .order-tours--container .order-tours--item-3,
+  .order-tours--container .order-tours--item-4 {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  #humburger {
+    float: right;
   }
 }

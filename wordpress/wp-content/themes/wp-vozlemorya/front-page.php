@@ -1,8 +1,5 @@
 <?php /* Template Name: Home Page */ get_header(); ?>
 
-
-
-
       <?php if( have_rows('main_slider') ): ?>
       <div id="home__slider" class="slider owl-carousel owl-theme uk-container">
         <?php while ( have_rows('main_slider') ) : the_row(); ?>
@@ -11,19 +8,18 @@
 
           <div class="slide item uk-flex uk-flex-middle" >
             <div class="slide_img" style="background-image: url(<?php if ( !empty($image)) { echo $image['url'];} ?>);"></div>
-                    <div class="slide_conten_wrapp">
-                      <div  class="slide-content" uk-scrollspy-class="">
-                        <?php the_sub_field('content'); ?>
-                      </div>
+              <div class="slide_conten_wrapp">
+                <div  class="slide-content" uk-scrollspy-class="">
+                  <?php the_sub_field('content'); ?>
+                </div>
 
-                      <?php  if ( !empty($link)) { ?>
-                        <div class="uk-button-extra-large green uk-margin-remove-vertical uk-text-center" uk-scrollspy-class="">
-                        <a class="el-content uk-button uk-button-default" href="<?php the_sub_field('link'); ?>" class="slide-btn red-btn"><?php the_sub_field('btn_label'); ?></a>
-                        </div>
-                      <?php } ?>
+                <?php  if ( !empty($link)) { ?>
+                  <div class="uk-button-extra-large green uk-margin-remove-vertical uk-text-center" uk-scrollspy-class="">
+                  <a class="el-content uk-button uk-button-default" href="<?php the_sub_field('link'); ?>" class="slide-btn red-btn"><?php the_sub_field('btn_label'); ?></a>
+                  </div>
+                <?php } ?>
 
-                    </div>
-
+              </div>
           </div>
           <?php  endwhile; ?>
         </div>
@@ -176,12 +172,6 @@
       </div>
       </div>
     </div>
-
-
-
-
-
-
 
     <div id="gallery" class="uk-section-default uk-section" uk-scrollspy="{&quot;target&quot;:&quot;[uk-scrollspy-class]&quot;,&quot;cls&quot;:&quot;uk-animation-fade&quot;,&quot;delay&quot;:300}">
       <div class="uk-container">
@@ -427,7 +417,7 @@
 
 
 <div id="request" class="uk-section-default">
-  <div style="background-image: url('/<?php echo get_template_directory_uri(); ?>/img/sunny-beach_bw.jpg');" class="uk-background-norepeat uk-background-cover uk-background-center-center uk-section">
+  <div style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/sunny-beach_bw.jpg');" class="uk-background-norepeat uk-background-cover uk-background-center-center uk-section">
     <div class="uk-container">
       <div class="uk-grid-margin uk-grid" uk-grid="">
         <div class="uk-width-large@m uk-first-column">
@@ -435,8 +425,8 @@
             <div class="custom">
               <div>
                 <span style="display:inline-block; overflow:hidden; width:60%; height:0; padding-bottom:60%; border-radius:50%;">
-    <img alt="Вячеслав Пулев" src="<?php echo get_field('lend_consalt_img')['url']; ?>">
-  </span>
+                  <img alt="Вячеслав Пулев" src="<?php echo get_field('lend_consalt_img')['url']; ?>">
+                </span>
               </div>
               <div class="uk-margin-remove-vertical uk-text-primary uk-text-large"><?php the_field('lend_consalt_name'); ?></div>
               <div class="uk-margin-remove-vertical"><?php the_field('lend_consalt_position'); ?></div>
@@ -470,9 +460,8 @@
               <div class="alert alert-danger error-note" style="display: none;"></div>
               <div class="category-desc">
               </div>
-
-<?php $form__code = get_field('lend_form_shortcode'); ?>
-<?php echo do_shortcode($form__code); ?>
+              <?php $form__code = get_field('lend_form_shortcode'); ?>
+              <?php echo do_shortcode($form__code); ?>
             </div>
           </div>
         </div>
@@ -480,10 +469,5 @@
     </div>
   </div>
 </div>
-
-
-
-
-
 
 <?php get_footer(); ?>
